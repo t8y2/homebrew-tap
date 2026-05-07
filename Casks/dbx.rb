@@ -1,16 +1,16 @@
 cask "dbx" do
-  version "0.4.3"
+  version "0.4.2"
 
   on_arm do
     url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_aarch64.dmg",
         verified: "github.com/t8y2/dbx/"
-    sha256 "ce0f2a73c191d8be92f9a732e731a931d419f44c0947b296796381070ca9b459"
+    sha256 "523ad025e32b00d51531997d19637d0ee646acffa0ca0d86a91389c79dae0091"
   end
 
   on_intel do
     url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_x64.dmg",
         verified: "github.com/t8y2/dbx/"
-    sha256 "9d6eaf8836047bf0007ed2c56f8d5f803bb32fcfe809df9d5ae23a1de2554e45"
+    sha256 "a202e4d697912052aa44d65fe9c269d114b56f569902dce7ca3e0ffec6429c5f"
   end
 
   name "DBX"
