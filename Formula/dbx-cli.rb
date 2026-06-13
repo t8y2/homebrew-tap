@@ -32,10 +32,10 @@ class DbxCli < Formula
   end
 
   test do
-    assert_path_exists bin/"dbx"
     output = shell_output("#{bin}/dbx capabilities --json")
     capabilities = JSON.parse(output)
-    assert capabilities.key?("directQuery"), "Missing directQuery capabilities"
-    assert capabilities.key?("desktopBridge"), "Missing desktopBridge capabilities"
+    assert capabilities.key?("directQueryTypes"), "Missing directQueryTypes"
+    assert capabilities.key?("bridgeRequiredTypes"), "Missing bridgeRequiredTypes"
+    assert capabilities["directQueryTypes"].is_a?(Array), "directQueryTypes should be an array"
   end
 end
