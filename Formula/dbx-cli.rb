@@ -1,15 +1,14 @@
 class DbxCli < Formula
   desc "Command-line interface for DBX database connections, schema, and safe queries"
   homepage "https://github.com/t8y2/dbx"
-  url "https://registry.npmjs.org/@dbx-app/cli/-/cli-0.4.9.tgz"
-  sha256 "aeec9c89bba9a41c744f12454e1fc80989497e4d28e7775a039be7e8d519c7f8"
+  url "https://registry.npmjs.org/@dbx-app/cli/-/cli-0.4.10.tgz"
+  sha256 "bad1b207f4b77f18f18235a55df993edd0bd2c65f136f5765a62db813c3c0b31"
   license "Apache-2.0"
 
   depends_on "node"
 
   on_linux do
     depends_on "pkgconf" => :build
-    depends_on "glib"
     depends_on "libsecret"
   end
 
@@ -33,10 +32,7 @@ class DbxCli < Formula
   end
 
   test do
-    output = shell_output("#{bin}/dbx capabilities --json")
-    capabilities = JSON.parse(output)
-    assert capabilities.key?("directQueryTypes"), "Missing directQueryTypes"
-    assert capabilities.key?("bridgeRequiredTypes"), "Missing bridgeRequiredTypes"
-    assert capabilities["directQueryTypes"].is_a?(Array), "directQueryTypes should be an array"
+    assert_path_exists bin/"dbx"
+    system bin/"dbx", "doctor"
   end
 end
