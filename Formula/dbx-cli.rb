@@ -1,34 +1,16 @@
 class DbxCli < Formula
   desc "Command-line interface for DBX database connections, schema, and safe queries"
   homepage "https://github.com/t8y2/dbx"
-  url "https://registry.npmjs.org/@dbx-app/cli/-/cli-0.4.34.tgz"
-  sha256 "0a7260f9f880bac95cba476da9e79e08efac10728536059bd6253c9692a8baa6"
+  url "https://registry.npmjs.org/@dbx-app/cli/-/cli-0.4.36.tgz"
+  sha256 "e40db881c2856a2e7f41dbad91b12bc74bb33a0d1103fba7e5c5245ed04599c1"
   license "Apache-2.0"
 
-  depends_on "node"
-
-  on_linux do
-    depends_on "pkgconf" => :build
-    depends_on "libsecret"
-  end
+    depends_on "node"
 
   def install
     system "npm", "install", *std_npm_args
     bin.install_symlink libexec.glob("bin/*")
 
-    # Rebuild better-sqlite3 and keytar native bindings for the current platform.
-    # prebuild-install is blocked by the Homebrew sandbox during npm install,
-    # so we must rebuild them explicitly via node-gyp.
-    node_modules = libexec/"lib/node_modules/@dbx-app/cli/node_modules"
-
-    cd node_modules/"better-sqlite3" do
-      system "npm", "run", "build-release"
-    end
-
-    cd node_modules/"keytar" do
-      rm_r "prebuilds" if File.directory?("prebuilds")
-      system "npm", "run", "build"
-    end
   end
 
   test do
