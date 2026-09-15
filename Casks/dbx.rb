@@ -5,8 +5,7 @@ cask "dbx" do
   sha256 arm:   "5b986d11eb6c7fbdabd6dd0bd2d4cf5661d8841acfbe83ba2d0b539054962aa9",
          intel: "39757b433d7adf99ee5e1752a1988336e19754df9ae126968dbdc52c67dc46f3"
 
-  url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_#{arch}.dmg",
-      verified: "github.com/t8y2/dbx/"
+  url "https://github.com/t8y2/dbx/releases/download/v#{version}/DBX_#{version}_#{arch}.dmg"
   name "DBX"
   desc "Database management tool"
   homepage "https://dbxio.com/"
