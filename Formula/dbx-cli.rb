@@ -1,25 +1,25 @@
 class DbxCli < Formula
   desc "Command-line interface for DBX database connections, schema, and safe queries"
   homepage "https://github.com/t8y2/dbx"
-  version "0.4.91"
+  version "0.4.92"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-cli-darwin-x64.tar.gz"
-      sha256 "1ebde4b9e992aba48c95b4b4e2aec0beea4d444de87fa8e5f711642e35c8f338"
+      sha256 "3111551956f15f61505fa8d84707e96c537a9f6182ee9b718eadb29bb5537153"
     else
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-cli-darwin-arm64.tar.gz"
-      sha256 "88eb66484c9d91bbbb4bddf66242428e032988758776b4f86a7dab52eb789fa0"
+      sha256 "171e5aee6e0f72cb7d2e11c227c85a7bc746863219a56ba343579a942affef13"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-cli-linux-x64-gnu.tar.gz"
-      sha256 "5e40ea06daf84b317ccad6bd1c01bbfb8ababc108c90f8168878f2566685b023"
+      sha256 "d861ef81ab5796dce84c692baae84c5836a45108432efeb473de25fafd0edbf8"
     else
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-cli-linux-arm64-gnu.tar.gz"
-      sha256 "22f996f3272e71887e5e597d7e6d2a5dd4fe5a00a21815ef67a77a483918de91"
+      sha256 "cb16cbbd939217ef3078a5c784553f911a575cd41470dd5a0ea130fe0210c49c"
     end
   end
 
