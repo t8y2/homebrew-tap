@@ -1,25 +1,25 @@
 class DbxMcp < Formula
   desc "Native MCP server for DBX database connections, schema, and safe queries"
   homepage "https://github.com/t8y2/dbx"
-  version "0.4.126"
+  version "0.4.127"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-mcp-darwin-x64.tar.gz"
-      sha256 "d73342a518116d25d35897720697d27a46ffc3fd2e5705ad68b51e8f66e0d3b0"
+      sha256 "f9670d4e0ad55827445f2bfd5cda30242a34dafa230c11337e79443a3b74a972"
     else
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-mcp-darwin-arm64.tar.gz"
-      sha256 "15d74b4aea904e217b871d1575bfb202697a31e43f7bf16784c14ee564614d3e"
+      sha256 "2094661a2fc49b1ffd0a8fb8a21c145f5a31aa6c0650891f4dc6943390a4d977"
     end
   end
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-mcp-linux-x64-gnu.tar.gz"
-      sha256 "a47e329db75615374b3c0f51216e89f2ec529babc04662124bd0299fbac07ef3"
+      sha256 "4f42c9054e317d4aa7d4530a19f727b3985a3c98173c9fa53945cd5aa0034066"
     else
       url "https://github.com/t8y2/dbx/releases/download/packages-v#{version}/dbx-mcp-linux-arm64-gnu.tar.gz"
-      sha256 "65ff4eae5e71d27c2c98dd53cf6d1c4ff4900ce86c95fb013e211a3633019029"
+      sha256 "672e56efcae42fe52498016d6a9c38e57b67276cc1fdc726d565bc019c725d7b"
     end
   end
 
