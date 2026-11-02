@@ -1,11 +1,11 @@
 cask "dbx" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.6.63"
-  sha256 arm:   "3116d422237c9aa667f169c0447624516e2192432ba502c51aabbdf829ecc88a",
-         intel: "ab82fcd868512d9f22f8f2ad86186f4634094c95e4a8144af90cbf0ed51231d5"
+  version "0.6.62"
+  sha256 arm:   "9a98901c8639adeab9351fdf8ddb5944c0b86640ebac889e6e96dd9df65d634c",
+         intel: "55cfc960349c0f128ed91aa0da5adbec7842c06b099284e37009d951dfc6c5e6"
 
-  url "https://github.com/t8y2/dbx/releases/download/v0.6.63-beta.20261101.3/DBX_#{version}_#{arch}.dmg"
+  url "https://github.com/t8y2/dbx/releases/download/v0.6.62/DBX_#{version}_#{arch}.dmg"
   name "DBX"
   desc "Database management tool"
   homepage "https://dbxio.com/"
