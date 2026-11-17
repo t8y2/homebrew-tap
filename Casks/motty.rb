@@ -1,9 +1,9 @@
 cask "motty" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.4.13"
-  sha256 arm:   "49664bf01eeb8ee666c6a50fa69414737c5df7ec78ef29b1af28fdfe199482df",
-         intel: "fabb16c75dabeaf0cd78bc412844e0c5e586b027539dc71cab19e68633152c9e"
+  version "0.4.14"
+  sha256 arm:   "c7e7d000ba49a98ec2daac8309b393f977a2c0b4e7196915a3ccfa61ba966312",
+         intel: "b418ef531d3d80c09e7ca5dd1cfc9657a1916758cbf8633ab5d418c8734acd72"
 
   url "https://github.com/t8y2/motty/releases/download/v#{version}/motty-#{version}-darwin-#{arch}.dmg"
   name "Motty"
